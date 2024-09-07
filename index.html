@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I LOVE YOU NIL <3 </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #ffdce0;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #f36c7d;
+    }
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #yes {
+        background-color: #ff85a2;
+        color: #fff;
+    }
+    #no {
+        background-color: #f36c7d;
+        color: #fff;
+    }
+    #bear {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>i love you more </h1>
+    <button id="yes" onclick="showLove()">yes</button>
+    <button id="no" onclick="showRandom()">NO</button>
+    <p id="loveResponse" style="display: none;"></p>
+
+</div>
+
+<script>
+    function showLove() {
+        document.getElementById('loveResponse').style.display = 'block';
+        document.getElementById('loveResponse').innerText = 'HAHAHA I WON I LOVE YOU MORE NIL <3 <3 <3';
+
+        document.getElementById('bear').style.display = 'block';
+    }
+
+    function showRandom() {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        const randomX = Math.floor(Math.random() * screenWidth);
+        const randomY = Math.floor(Math.random() * screenHeight);
+
+        document.getElementById('no').style.position = 'absolute';
+        document.getElementById('no').style.left = randomX + 'px';
+        document.getElementById('no').style.top = randomY + 'px';
+    }
+</script>
+</body>
+</html>
